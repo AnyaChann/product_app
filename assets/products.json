@@ -1,0 +1,38 @@
+[
+    {
+      "id": 1,
+      "name": "Wireless Headphones",
+      "price": 59.99,
+      "image": "https://example.com/img/headphones.png",
+      "description": "Chất lượng cao, chống ồn chủ động."
+    },
+    {
+      "id": 2,
+      "name": "Smart Watch",
+      "price": 129.99,
+      "image": "https://example.com/img/watch.png",
+      "description": "Theo dõi sức khỏe, thông báo cuộc gọi."
+    },
+    {
+      "id": 3,
+      "name": "Bluetooth Speaker",
+      "price": 49.99,
+      "image": "https://example.com/img/speaker.png",
+      "description": "Âm thanh sống động, kết nối dễ dàng."
+    },
+    {
+      "id": 4,
+      "name": "Laptop Stand",
+      "price": 29.99,
+      "image": "https://example.com/img/laptop-stand.png",
+      "description": "Giúp nâng cao tư thế làm việc."
+    },
+    {
+      "id": 5,
+      "name": "USB-C Hub",
+      "price": 19.99,
+      "image": "https://example.com/img/usb-hub.png",
+      "description": "Mở rộng cổng kết nối cho laptop."
+    }
+  ]
+  
