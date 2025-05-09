@@ -21,7 +21,10 @@ class _ProductListPageState extends State<ProductListPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Product List')),
+      appBar: AppBar(
+        title: const Text('Product List'),
+        backgroundColor: Colors.deepPurple,
+      ),
       body: FutureBuilder<List<Product>>(
         future: _productsFuture,
         builder: (context, snapshot) {
@@ -34,6 +37,7 @@ class _ProductListPageState extends State<ProductListPage> {
           }
 
           final products = snapshot.data!;
+          final totalPages = (products.length / _itemsPerPage).ceil();
           final startIndex = _currentPage * _itemsPerPage;
           final endIndex = (startIndex + _itemsPerPage).clamp(0, products.length);
           final currentProducts = products.sublist(startIndex, endIndex);
@@ -45,46 +49,78 @@ class _ProductListPageState extends State<ProductListPage> {
                   itemCount: currentProducts.length,
                   itemBuilder: (context, index) {
                     final product = currentProducts[index];
-                    return ListTile(
-                      leading: Image.network(product.image, width: 50, height: 50),
-                      title: Text(product.name),
-                      subtitle: Text('\$${product.price.toStringAsFixed(2)}'),
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => ProductDetailPage(product: product),
-                          ),
-                        );
-                      },
+                    return Card(
+                      margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                      elevation: 4,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: ListTile(
+                        leading: ClipRRect(
+                          borderRadius: BorderRadius.circular(8),
+                          child: Image.asset(product.image, width: 50, height: 50, fit: BoxFit.cover),
+                        ),
+                        title: Text(
+                          product.name,
+                          style: const TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        subtitle: Text(
+                          '\$${product.price.toStringAsFixed(2)}',
+                          style: const TextStyle(color: Colors.green),
+                        ),
+                        trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ProductDetailPage(product: product),
+                            ),
+                          );
+                        },
+                      ),
                     );
                   },
                 ),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  TextButton(
-                    onPressed: _currentPage > 0
-                        ? () {
-                            setState(() {
-                              _currentPage--;
-                            });
-                          }
-                        : null,
-                    child: const Text('Previous Page'),
-                  ),
-                  TextButton(
-                    onPressed: endIndex < products.length
-                        ? () {
-                            setState(() {
-                              _currentPage++;
-                            });
-                          }
-                        : null,
-                    child: const Text('Next Page'),
-                  ),
-                ],
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    ElevatedButton(
+                      onPressed: _currentPage > 0
+                          ? () {
+                              setState(() {
+                                _currentPage--;
+                              });
+                            }
+                          : null,
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.deepPurple,
+                        disabledBackgroundColor: Colors.grey,
+                      ),
+                      child: const Text('Previous Page'),
+                    ),
+                    Text(
+                      'Page ${_currentPage + 1} of $totalPages',
+                      style: const TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    ElevatedButton(
+                      onPressed: endIndex < products.length
+                          ? () {
+                              setState(() {
+                                _currentPage++;
+                              });
+                            }
+                          : null,
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.deepPurple,
+                        disabledBackgroundColor: Colors.grey,
+                      ),
+                      child: const Text('Next Page'),
+                    ),
+                  ],
+                ),
               ),
             ],
           );

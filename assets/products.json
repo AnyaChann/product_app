@@ -3,36 +3,140 @@
       "id": 1,
       "name": "Wireless Headphones",
       "price": 59.99,
-      "image": "https://example.com/img/headphones.png",
+      "image": "images/example.jpg",
       "description": "Chất lượng cao, chống ồn chủ động."
     },
     {
       "id": 2,
       "name": "Smart Watch",
       "price": 129.99,
-      "image": "https://example.com/img/watch.png",
+      "image": "images/example.jpg",
       "description": "Theo dõi sức khỏe, thông báo cuộc gọi."
     },
     {
       "id": 3,
       "name": "Bluetooth Speaker",
       "price": 49.99,
-      "image": "https://example.com/img/speaker.png",
+      "image": "images/example.jpg",
       "description": "Âm thanh sống động, kết nối dễ dàng."
     },
     {
       "id": 4,
       "name": "Laptop Stand",
       "price": 29.99,
-      "image": "https://example.com/img/laptop-stand.png",
+      "image": "images/example.jpg",
       "description": "Giúp nâng cao tư thế làm việc."
     },
     {
       "id": 5,
       "name": "USB-C Hub",
       "price": 19.99,
-      "image": "https://example.com/img/usb-hub.png",
+      "image": "images/example.jpg",
       "description": "Mở rộng cổng kết nối cho laptop."
+    },
+    {
+      "id": 6,
+      "name": "Gaming Mouse",
+      "price": 39.99,
+      "image": "images/example.jpg",
+      "description": "Chuột chơi game với độ chính xác cao."
+    },
+    {
+      "id": 7,
+      "name": "Mechanical Keyboard",
+      "price": 89.99,
+      "image": "images/example.jpg",
+      "description": "Bàn phím cơ với đèn LED RGB."
+    },
+    {
+      "id": 8,
+      "name": "Portable SSD",
+      "price": 99.99,
+      "image": "images/example.jpg",
+      "description": "Ổ cứng di động tốc độ cao."
+    },
+    {
+      "id": 9,
+      "name": "Webcam",
+      "price": 49.99,
+      "image": "images/example.jpg",
+      "description": "Webcam Full HD cho hội nghị trực tuyến."
+    },
+    {
+      "id": 10,
+      "name": "Wireless Charger",
+      "price": 24.99,
+      "image": "images/example.jpg",
+      "description": "Sạc không dây tiện lợi và nhanh chóng."
+    },
+    {
+      "id": 11,
+      "name": "Action Camera",
+      "price": 199.99,
+      "image": "images/example.jpg",
+      "description": "Camera hành trình chất lượng 4K."
+    },
+    {
+      "id": 12,
+      "name": "Noise Cancelling Earbuds",
+      "price": 79.99,
+      "image": "images/example.jpg",
+      "description": "Tai nghe chống ồn với âm thanh sống động."
+    },
+    {
+      "id": 13,
+      "name": "Smartphone Gimbal",
+      "price": 149.99,
+      "image": "images/example.jpg",
+      "description": "Gimbal chống rung cho điện thoại thông minh."
+    },
+    {
+      "id": 14,
+      "name": "Power Bank",
+      "price": 29.99,
+      "image": "images/example.jpg",
+      "description": "Pin sạc dự phòng dung lượng cao."
+    },
+    {
+      "id": 15,
+      "name": "4K Monitor",
+      "price": 299.99,
+      "image": "images/example.jpg",
+      "description": "Màn hình 4K với độ phân giải sắc nét."
+    },
+    {
+      "id": 16,
+      "name": "VR Headset",
+      "price": 399.99,
+      "image": "images/example.jpg",
+      "description": "Kính thực tế ảo cho trải nghiệm sống động."
+    },
+    {
+      "id": 17,
+      "name": "Smart Light Bulb",
+      "price": 19.99,
+      "image": "images/example.jpg",
+      "description": "Bóng đèn thông minh điều khiển qua ứng dụng."
+    },
+    {
+      "id": 18,
+      "name": "Fitness Tracker",
+      "price": 49.99,
+      "image": "images/example.jpg",
+      "description": "Thiết bị theo dõi sức khỏe và vận động."
+    },
+    {
+      "id": 19,
+      "name": "Drone",
+      "price": 499.99,
+      "image": "images/example.jpg",
+      "description": "Drone quay phim chất lượng cao."
+    },
+    {
+      "id": 20,
+      "name": "Portable Projector",
+      "price": 199.99,
+      "image": "images/example.jpg",
+      "description": "Máy chiếu di động nhỏ gọn và tiện lợi."
     }
-  ]
-  
+]
