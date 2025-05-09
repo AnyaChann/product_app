@@ -107,6 +107,6 @@ flutter run
 
 - Họ tên: `Bach To`
 - Email: `bachcter504@gmail.com`
-- 🧑‍💻 GitHub: [GitHub Repository](https://github.com/AnyaChann/product_app.git)
+- GitHub: [GitHub Repository](https://github.com/AnyaChann/product_app.git)
 
 ---
